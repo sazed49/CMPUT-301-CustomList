@@ -33,4 +33,25 @@ public class CityList {
         return list;
     }
 
+    /**
+     * This deletes a city to the list if the city does  exist
+     * @param city
+     *      This is a candidate city to delete
+     */
+    public void delete(City city) {
+        if (!(cities.contains(city))) {
+            //cities.remove(city);
+            throw new IllegalArgumentException();
+        }
+            cities.remove(city);
+
+    }
+    /**
+     * This returns the size of citylist
+     * @return
+     *  Returns the size of citylist array
+     */
+    public int count_size() {
+        return cities.size();
+    }
 }
